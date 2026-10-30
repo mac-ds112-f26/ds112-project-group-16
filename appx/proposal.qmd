@@ -1,5 +1,45 @@
 ---
-title: "Proposal"
+title: "Instant Noodle Ranking: Which Countries Make the Best Instant Noodles?"
+subtitle: "Proposal"
+author: "Ivy Lin & Angel Yan"
 ---
 
-Your proposal go here.
+## Project Description:
+Instant noodles are a popular and convenient food around the world, but they have many different flavors, brands, and packaging styles. In this project, we want to explore how instant noodle ratings vary across countries and what characteristics are associated with higher ratings. We are using data from The Ramen Rater (https://www.theramenrater.com/). We will compare ratings by country, brand, and packaging style (cup, bowl, pack, etc.). We are also interested in whether spicy instant noodles tend to receive higher ratings than other flavors. We hope to discover patterns in instant noodle ratings through geographic and statistical visualizations and explore what makes certain flavors stand out.
+
+## Research Questions:
+1. How do instant noodle ratings vary across countries? Which countries have the highest average ratings, and how many products from each country have been reviewed?
+2. How do ratings differ across brands and packaging styles? Do certain brands or packaging types, such as cups, bowls, or packs, tend to receive higher ratings?
+3. Do spicy instant noodles tend to receive higher ratings than non-spicy varieties? Does this pattern vary across countries?
+
+## Motivation:
+We have been eating instant noodles during the semester since we don't have a meal plan, and this is the fastest food we can get in the afternoon. Instant noodles are also a familiar food for many people. They are pretty affordable, convenient, and available in a wide variety of flavors from different countries. We are curious about more flavors and whether the instant noodles we personally enjoy are also highly rated by reviewers. It should also reflect different regional food cultures and preferences. By comparing ratings across countries and product characteristics, we hope to better understand the variety of instant noodles available around the world and discover some unexpected patterns.
+
+## Potential Dataset:
+Dataset: The Ramen Rater - Instant Noodle ratings
+Source: The Ramen Rater (https://www.theramenrater.com/)
+Description: We found this on Google, and The Ramen Rater is a website that has a lot of reviews about instant noodles from around the world.
+Dataset variables: The reviews include information about instant noodle products, such as their brands, countries, varieties (name or flavor), packaging styles, and star ratings (0-5).
+
+We plan to use these variables to compare average ratings across countries, brands, and packaging styles. We may also categorize varieties based on flavor-related keywords in their names to investigate whether spicy noodles tend to receive higher ratings.
+Since these ratings come from every single reviewer rather than a representative sample of consumers, our findings will describe patterns in The Ramen Rater's reviews rather than universal preferences.
+
+## Communication Plan: 
+We will primarily communicate through WeChat and WhatsApp to share updates, discuss ideas, and coordinate project tasks. Usually, we will set a meeting time to work on the project. We should respond to messages within 12 hours. We will schedule meetings based on our availability (probably on weekends or before the deadline) to see progress, solve issues, and work on next steps. We will also use GitHub to track and help each other with our tasks, share code, and collaborate on the project.
+
+## Team Roles:
+Angel will be the main contact and will review our code. Ivy will oversee the project as the technical lead. We will both contribute to data collection, cleaning, analysis, viz, and writing. Also regularly review each other's work and make decisions together.
+
+## Conflict: For the deadline, we should set a tentative deadline before the deadline date. Then we can have more time to review the project, help each other, and update each other on our progress to avoid last-minute problems and ghosting.
+We should also discuss our reasoning and consider which option can better support our research question and meet the course requirements if we disagree on a project decision. For the code, if we have different solutions, then write both for different viz or ask for help to see which viz is better and cleaner.
+
+## Research Implementation Plan: 
+We will track our progress using GitHub and in person. Keep share responsibility for the project.
+here is the draft for the future plan.
+1. PM1: Proposal: Lead - Angel 10/30
+2. PM2: Effective Teamwork: Lead - Ivy 11/6
+3. PM3: Case Study: Lead - Angel 11/13
+4. PM4: EDA: Lead - Ivy 11/20
+5. PM5: Progress Presentation: Lead - Angel & Ivy
+6. PM6: Initial Presentations: Lead - Angel & Ivy
+7. PM7: Deliverables + Evaluation: Lead - Angel & Ivy
