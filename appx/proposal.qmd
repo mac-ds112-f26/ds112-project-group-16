@@ -33,7 +33,7 @@ Angel will be the main contact and will review our code. Ivy will oversee the pr
 Conflict: For the deadline, we should set a tentative deadline before the deadline date. Then we can have more time to review the project, help each other, and update each other on our progress to avoid last-minute problems and ghosting.
 We should also discuss our reasoning and consider which option can better support our research question and meet the course requirements if we disagree on a project decision. For the code, if we have different solutions, then write both for different viz or ask for help to see which viz is better and cleaner.
 
-Research Plan: We will track our progress using GitHub and in person. Keep share responsibility for the project.
+Research Implementation Plan: We will track our progress using GitHub and in person. Keep share responsibility for the project.
 here is the draft for the future plan.
 1. PM1: Proposal: Lead - Angel 10/30
 2. PM2: Effective Teamwork: Lead - Ivy 11/6
