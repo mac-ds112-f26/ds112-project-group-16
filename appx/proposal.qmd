@@ -9,6 +9,7 @@ author: "Ivy Lin & Angel Yan"
 Instant noodles are a popular and convenient food around the world, but they have many different flavors, brands, and packaging styles. In this project, we want to explore how instant noodle ratings vary across countries and what characteristics are associated with higher ratings. We are using data from The Ramen Rater (https://www.theramenrater.com/). We will compare ratings by country, brand, and packaging style (cup, bowl, pack, etc.). We are also interested in whether spicy instant noodles tend to receive higher ratings than other flavors. We hope to discover patterns in instant noodle ratings through geographic and statistical visualizations and explore what makes certain flavors stand out.
 
 ## Research Questions:
+
 1. How do instant noodle ratings vary across countries? Which countries have the highest average ratings, and how many products from each country have been reviewed?
 2. How do ratings differ across brands and packaging styles? Do certain brands or packaging types, such as cups, bowls, or packs, tend to receive higher ratings?
 3. Do spicy instant noodles tend to receive higher ratings than non-spicy varieties? Does this pattern vary across countries?
