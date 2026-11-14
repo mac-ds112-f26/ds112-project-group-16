@@ -1,5 +1,26 @@
 ---
 title: "Case Study"
+team members: Ivy and Angel
 ---
 
-Your case study go here.
+# Case Study: The Differences in How CNN, MSNBC, and FOX Cover the News
+website: https://pudding.cool/2018/01/chyrons/
+author: Charlie Smart, The Pudding (2018)
+
+## Analysis of the Data Story
+
+The article examines how CNN, MSNBC, and Fox News cover the news differently by analyzing the words displayed in their television chyrons. It begins by discussing the role of cable news in shaping people's understanding of current events and raises the question of how the information people receive differs across networks. Instead of  making a statement about political bias at first, the author introduces and shows the dataset that allows the visualizations to gradually develop the argument. We think this is an effective way to begin the story because readers understand the importance of the research question before learning the data.
+
+We liked how the article is organized into three sections. "Choosing the News," "Burn Out or Fade Away," and "Context Is Key." The first section uses a triangular visualization to compare the frequency of words across the three journalism companies. The author explains this unfamiliar visualization and helps the reader to understand. The second section moves to changes in coverage over time. This transition is meant to explain how a network discusses a particular issue all the time. The third section develops the argument by examining the words that show up together. We noticed that each section can allow the story to become more detailed and keep its original research question.
+
+One aspect we found especially interesting is the interactive design of the website. Readers can search for words they are interested in and explore the corresponding visualizations. We liked how this personalization gives readers an opportunity to interact with the data. At the same time, the author still provides a clear narrative through the selected topics and explanations. We think this guided storytelling and independent exploration is one aspect of the article.
+
+The "Context Is Key" section also allows readers to switch between "Weighted" and "Raw Count" when examining words associated with a selected term. Raw Count shows how frequently words appear together. Weighted adjusts the ranking according to how much those words are associated with the selected research topic. The same dataset can produce different rankings depending on how the relationships between words are measured. Allowing readers to compare these two methods provides more transparency about the analysis and gives them an opportunity to examine how the results change.
+
+However, this also made us think about the relationship between data transparency and the author's interpretation. Although readers can explore the data themselves, the author still decides which words to highlight, which patterns to discuss, and how to organize the findings. The visualization is designed and organized to potentially direct readers' attention toward particular interpretations.
+
+The article concludes by connecting these findings to the broader issue of how different news sources may influence public understanding. We think the conclusion is effective because it returns to the question introduced at the beginning.
+
+## What we learned for our project
+
+This article helped us understand that an effective data story involves beyond creating clear and visually appealing charts. The order of the visualizations and the connections between them can influence how readers develop their understanding of the research question. For our instant noodle ranking project, we want to organize our visualizations so that each one adds something meaningful to the previous analysis rather than presenting unrelated comparisons. I hope this can help readers to stay on track, and we can show a consistent story We think interactive features could make our project more engaging and allow readers to investigate different aspects of instant noodle ratings according to their interests. But we haven't started to think about how we can make it possible yet.
