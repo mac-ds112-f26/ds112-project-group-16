@@ -1,0 +1,199 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project Title",
+    "section": "",
+    "text": "Your report goes here.\n\nCode# a test code chunk",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Report</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member1.html",
+    "href": "eda/eda-member1.html",
+    "title": "Member 1 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Member 1 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member2.html",
+    "href": "eda/eda-member2.html",
+    "title": "Member 2 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Member 2 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member3.html",
+    "href": "eda/eda-member3.html",
+    "title": "Member 3 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Member 3 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html",
+    "href": "appx/proposal.html",
+    "title": "Appendix A — Proposal",
+    "section": "",
+    "text": "Project Description\nInstant noodles are a popular and convenient food around the world, but they have many different flavors, brands, and packaging styles. In this project, we want to explore how instant noodle ratings vary across countries and what characteristics are associated with higher ratings. We are using data from The Ramen Rater (https://www.theramenrater.com/). We will compare ratings by country, brand, and packaging style (cup, bowl, pack, etc.). We are also interested in whether spicy instant noodles tend to receive higher ratings than other flavors. We hope to discover patterns in instant noodle ratings through geographic and statistical visualizations and explore what makes certain flavors stand out.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#research-questions",
+    "href": "appx/proposal.html#research-questions",
+    "title": "Appendix A — Proposal",
+    "section": "Research Questions:",
+    "text": "Research Questions:\n\nHow do instant noodle ratings vary across countries? Which countries have the highest average ratings, and how many products from each country have been reviewed?\nHow do ratings differ across brands and packaging styles? Do certain brands or packaging types, such as cups, bowls, or packs, tend to receive higher ratings?\nDo spicy instant noodles tend to receive higher ratings than non-spicy varieties? Does this pattern vary across countries?",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#motivation",
+    "href": "appx/proposal.html#motivation",
+    "title": "Appendix A — Proposal",
+    "section": "Motivation:",
+    "text": "Motivation:\nWe have been eating instant noodles during the semester since we don’t have a meal plan, and this is the fastest food we can get in the afternoon. Instant noodles are also a familiar food for many people. They are pretty affordable, convenient, and available in a wide variety of flavors from different countries. We are curious about more flavors and whether the instant noodles we personally enjoy are also highly rated by reviewers. It should also reflect different regional food cultures and preferences. By comparing ratings across countries and product characteristics, we hope to better understand the variety of instant noodles available around the world and discover some unexpected patterns.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#potential-dataset",
+    "href": "appx/proposal.html#potential-dataset",
+    "title": "Appendix A — Proposal",
+    "section": "Potential Dataset:",
+    "text": "Potential Dataset:\nDataset: The Ramen Rater - Instant Noodle ratings Source: The Ramen Rater (https://www.theramenrater.com/) Description: We found this on Google, and The Ramen Rater is a website that has a lot of reviews about instant noodles from around the world. Dataset variables: The reviews include information about instant noodle products, such as their brands, countries, varieties (name or flavor), packaging styles, and star ratings (0-5).\nWe plan to use these variables to compare average ratings across countries, brands, and packaging styles. We may also categorize varieties based on flavor-related keywords in their names to investigate whether spicy noodles tend to receive higher ratings. Since these ratings come from every single reviewer rather than a representative sample of consumers, our findings will describe patterns in The Ramen Rater’s reviews rather than universal preferences.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#communication-plan",
+    "href": "appx/proposal.html#communication-plan",
+    "title": "Appendix A — Proposal",
+    "section": "Communication Plan:",
+    "text": "Communication Plan:\nWe will primarily communicate through WeChat and WhatsApp to share updates, discuss ideas, and coordinate project tasks. Usually, we will set a meeting time to work on the project. We should respond to messages within 12 hours. We will schedule meetings based on our availability (probably on weekends or before the deadline) to see progress, solve issues, and work on next steps. We will also use GitHub to track and help each other with our tasks, share code, and collaborate on the project.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#team-roles",
+    "href": "appx/proposal.html#team-roles",
+    "title": "Appendix A — Proposal",
+    "section": "Team Roles:",
+    "text": "Team Roles:\nAngel will be the main contact and will review our code. Ivy will oversee the project as the technical lead. We will both contribute to data collection, cleaning, analysis, viz, and writing. Also regularly review each other’s work and make decisions together.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#conflict",
+    "href": "appx/proposal.html#conflict",
+    "title": "Appendix A — Proposal",
+    "section": "Conflict:",
+    "text": "Conflict:\nFor the deadline, we should set a tentative deadline before the deadline date. Then we can have more time to review the project, help each other, and update each other on our progress to avoid last-minute problems and ghosting. We should also discuss our reasoning and consider which option can better support our research question and meet the course requirements if we disagree on a project decision. For the code, if we have different solutions, then write both for different viz or ask for help to see which viz is better and cleaner.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#research-implementation-plan",
+    "href": "appx/proposal.html#research-implementation-plan",
+    "title": "Appendix A — Proposal",
+    "section": "Research Implementation Plan:",
+    "text": "Research Implementation Plan:\nWe will track our progress using GitHub and in person. Keep share responsibility for the project. here is the draft for the future plan. 1. PM1: Proposal: Lead - Angel 10/30 2. PM2: Effective Teamwork: Lead - Ivy 11/6 3. PM3: Case Study: Lead - Angel 11/13 4. PM4: EDA: Lead - Ivy 11/20 5. PM5: Progress Presentation: Lead - Angel & Ivy 6. PM6: Initial Presentations: Lead - Angel & Ivy 7. PM7: Deliverables + Evaluation: Lead - Angel & Ivy",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/case-study.html",
+    "href": "appx/case-study.html",
+    "title": "Appendix B — Case Study",
+    "section": "",
+    "text": "Case Study: The Differences in How CNN, MSNBC, and FOX Cover the News\nwebsite: https://pudding.cool/2018/01/chyrons/ author: Charlie Smart, The Pudding (2018)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "appx/case-study.html#analysis-of-the-data-story",
+    "href": "appx/case-study.html#analysis-of-the-data-story",
+    "title": "Appendix B — Case Study",
+    "section": "Analysis of the Data Story",
+    "text": "Analysis of the Data Story\nThe article examines how CNN, MSNBC, and Fox News cover the news differently by analyzing the words displayed in their television chyrons. It begins by discussing the role of cable news in shaping people’s understanding of current events and raises the question of how the information people receive differs across networks. Instead of making a statement about political bias at first, the author introduces and shows the dataset that allows the visualizations to gradually develop the argument. We think this is an effective way to begin the story because readers understand the importance of the research question before learning the data.\nWe liked how the article is organized into three sections. “Choosing the News,” “Burn Out or Fade Away,” and “Context Is Key.” The first section uses a triangular visualization to compare the frequency of words across the three journalism companies. The author explains this unfamiliar visualization and helps the reader to understand. The second section moves to changes in coverage over time. This transition is meant to explain how a network discusses a particular issue all the time. The third section develops the argument by examining the words that show up together. We noticed that each section can allow the story to become more detailed and keep its original research question.\nOne aspect we found especially interesting is the interactive design of the website. Readers can search for words they are interested in and explore the corresponding visualizations. We liked how this personalization gives readers an opportunity to interact with the data. At the same time, the author still provides a clear narrative through the selected topics and explanations. We think this guided storytelling and independent exploration is one aspect of the article.\nThe “Context Is Key” section also allows readers to switch between “Weighted” and “Raw Count” when examining words associated with a selected term. Raw Count shows how frequently words appear together. Weighted adjusts the ranking according to how much those words are associated with the selected research topic. The same dataset can produce different rankings depending on how the relationships between words are measured. Allowing readers to compare these two methods provides more transparency about the analysis and gives them an opportunity to examine how the results change.\nHowever, this also made us think about the relationship between data transparency and the author’s interpretation. Although readers can explore the data themselves, the author still decides which words to highlight, which patterns to discuss, and how to organize the findings. The visualization is designed and organized to potentially direct readers’ attention toward particular interpretations.\nThe article concludes by connecting these findings to the broader issue of how different news sources may influence public understanding. We think the conclusion is effective because it returns to the question introduced at the beginning.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "appx/case-study.html#what-we-learned-for-our-project",
+    "href": "appx/case-study.html#what-we-learned-for-our-project",
+    "title": "Appendix B — Case Study",
+    "section": "What we learned for our project",
+    "text": "What we learned for our project\nThis article helped us understand that an effective data story involves beyond creating clear and visually appealing charts. The order of the visualizations and the connections between them can influence how readers develop their understanding of the research question. For our instant noodle ranking project, we want to organize our visualizations so that each one adds something meaningful to the previous analysis rather than presenting unrelated comparisons. I hope this can help readers to stay on track, and we can show a consistent story We think interactive features could make our project more engaging and allow readers to investigate different aspects of instant noodle ratings according to their interests. But we haven’t started to think about how we can make it possible yet.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member1.html",
+    "href": "wa/wa-member1.html",
+    "title": "Appendix C — Member 1 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Member 1 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member2.html",
+    "href": "wa/wa-member2.html",
+    "title": "Appendix D — Member 2 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Member 2 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member3.html",
+    "href": "wa/wa-member3.html",
+    "title": "Appendix E — Member 3 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Member 3 First Name & Last Name Initial</span>"
+    ]
+  }
+]
