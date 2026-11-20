@@ -1,5 +1,107 @@
 ---
-title: "Member 2 First Name & Last Name Initial"
+title: "Member 2: Angel Yan"
 ---
 
-Your exploratory data analysis of the team datasets go here.
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(DataExplorer)
+library(janitor)
+library(gtsummary)
+
+ramen <- read_csv("../data/raw/ramen_ratings.csv")
+glimpse(ramen)
+```
+
+
+Research Question:
+
+1. Which packaging styles are most common in the dataset?
+2. How do ratings vary across different packaging styles?
+3. Which packaging styles have the highest proportion of highly rated instant noodles?
+
+```{r}
+introduce(ramen) # rows and column
+```
+```{r}
+ggplot(ramen, aes(x = style)) +
+  geom_bar(fill = "lightblue") +
+  labs(
+    title = "Which Packaging Styles Are Most Common?",
+    x = "Packaging Style",
+    y = "Number of Reviews"
+  )
+```
+::: {.callout-note title="Observation"}
+Pack is the most common packaging style in the dataset, followed by Bowl and Cup. The distribution is uneven.
+:::
+
+```{r}
+# janitor
+ramen |>
+  tabyl(style) |>
+  adorn_pct_formatting()
+```
+
+
+```{r}
+# avoid n/a data
+ramen_style <- ramen |>
+  filter(
+    style %in% c("Pack", "Bowl", "Cup", "Tray"),
+    stars >= 0
+  )
+
+ggplot(ramen_style, aes(x = style, y = stars)) +
+  geom_boxplot(fill = "pink", color = "grey") +
+  labs(
+    title = "How Do Ratings Differ Across Packaging Styles?",
+    x = "Packaging Style",
+    y = "Rating"
+  )
+```
+
+
+::: {.callout-note title="Observation"}
+
+Bowl, Pack, and Tray have similar median ratings of around 3.75, while Cup has a slightly lower median rating of around 3.5. All four packaging styles have some very low-rated outliers. This suggests that packaging style may not fully explain the differences in ratings.
+:::
+
+```{r}
+#gtsummary
+ramen_style |>
+  tbl_summary(
+    by = style,
+    include = stars
+  )
+```
+
+
+```{r}
+high_ratings <- ramen_style |>
+  group_by(style) |>
+  summarise(
+    percent_high = mean(stars >= 4) * 100
+  )
+
+ggplot(high_ratings, aes(x = style, y = percent_high)) +
+  geom_col(fill = "lightblue") +
+  geom_text(aes(label = paste0(round(percent_high, 2), "%"))) +
+  labs(
+    title = "Which Packaging Styles Have the Most High Ratings?",
+    subtitle = "Percentage of noodles rated 4 stars or above",
+    x = "Packaging Style",
+    y = "High Ratings (%)"
+  )
+```
+
+
+::: {.callout-note title="Observation"}
+Pack has the highest percentage of noodles rated 4 stars or above (45.21%), Bowl (44.93%) and Tray (44.20%). And cup has a much lower percentage (31.66%). Packages have almost the same percentage of high ratings, but the number of reviews for each packaging style is very different. So packaging style may not be the main factor influencing ratings.
+:::
+
+Conclusion:
+
+Through this EDA, I found that packaging styles are not equally represented in the dataset, with Pack being the most common. Although Bowl, Pack, and Tray have similar median ratings and percentages of highly rated products, Cup tends to receive lower ratings. Also, the number of reviews are differently across packaging styles, but this does not fully related to higher ratings.
+
+Overall, packaging style appears to be associated with some differences in ratings, but it cannot be enough to explain these differences on its own. This analysis contributes to our team's second research question and provides another perspective for understanding instant noodle ratings.
