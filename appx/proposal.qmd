@@ -22,7 +22,7 @@ We have been eating instant noodles during the semester since we don't have a me
 ## Potential Dataset:
 
 Dataset: The Ramen Rater - Instant Noodle ratings
-Source: The Ramen Rater (https://www.theramenrater.com/)
+Source: The Ramen Rater (https://www.theramenrater.com/#google_vignette)
 Description: We found this on Google, and The Ramen Rater is a website that has a lot of reviews about instant noodles from around the world.
 Dataset variables: The reviews include information about instant noodle products, such as their brands, countries, varieties (name or flavor), packaging styles, and star ratings (0-5).
 
