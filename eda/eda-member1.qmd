@@ -1,5 +1,333 @@
 ---
-title: "Member 1 First Name & Last Name Initial"
+title: "Member 1 Na Lin Initial"
+author: "Na Lin"
+format: html
 ---
 
-Your exploratory data analysis of the team datasets go here.
+## Introduction
+
+For our project, we are interested in exploring how instant noodle ratings differ across countries and brands.
+Since the dataset contains reviews from different places, I want to take a closer look at how people rate instant noodles and whether some patterns can be found across countries.
+
+In this EDA, I will mainly focus on the relationship between country and rating, the distribution of ratings, and how the number of reviews may relate to the ratings.
+Rather than assuming that the highest-rated noodles are necessarily the best, I want to first understand what the data actually shows and what limitations might affect our comparisons.
+
+## Data Source and Description
+
+The dataset used in this analysis comes from The Ramen Rater, a website that reviews instant noodle products from different countries.
+I obtained the dataset from the TidyTuesday project, which published the data on June 4, 2019.
+
+The dataset contains 3,180 reviews and six variables, including brand, variety, packaging style, country, and star rating.
+
+```{r}
+library(tidyverse)
+
+ramen <- read_csv("../data/raw/ramen_ratings.csv")
+
+```
+
+```{r}
+glimpse(ramen)
+```
+
+```{r}
+summary(ramen)
+```
+
+Finding: The median rating (3.75) is slightly higher than the mean rating (3.688)
+
+## Investigate missing values and zero ratings
+
+Before cleaning, I want to know exactly which records are missing ratings and whether the zero ratings are actual observations.
+
+```{r}
+# Check missing values
+colSums(is.na(ramen))
+
+ramen |>
+  filter(is.na(stars))
+
+ramen |>
+  filter(stars == 0)
+
+problems(ramen)
+```
+```{r}
+library(visdat)
+
+vis_dat(ramen)
+```
+
+::: callout-tip
+## Initial Data Observations
+
+The initial inspection shows that the dataset contains 3,180 reviews and six variables.
+Most variables are complete, but there are some missing values in `review_number`, `style`, and `stars`.
+
+The average rating is 3.688, while the median is 3.75.
+The middle 50% of ratings fall between 3.25 and 4.50.
+This suggests that ratings are generally concentrated toward the higher end of the scale, although the distribution needs further investigation.
+
+Before conducting comparisons, I will investigate the missing ratings and check whether zero ratings represent valid reviews.
+:::
+
+## Investigating Zero Ratings
+
+```{r}
+ramen |>
+  filter(stars == 0) |>
+  select(brand, variety, style, country, stars)
+```
+
+```{r}
+ramen |>
+  filter(is.na(stars)) |>
+  select(brand, variety, style, country, stars)
+```
+
+```{r}
+ramen |>
+  filter(stars == 0) |>
+  count(country, sort = TRUE)
+```
+
+```{r}
+ramen |>
+  filter(stars == 0) |>
+  select(variety, style, country, stars)
+```
+
+```{r}
+ramen |>
+  filter(stars == 0) |>
+  count(style, sort = TRUE)
+```
+
+```{r}
+ramen |>
+  filter(is.na(stars)) |>
+  count(brand, sort = TRUE)
+```
+
+## Data Cleaning
+
+```{r}
+ramen_rated <- ramen |>
+  filter(!is.na(stars))
+
+dim(ramen_rated)
+```
+
+```{r}
+colSums(is.na(ramen_rated))
+```
+
+::: callout-note
+**Data Cleaning Decisions**
+
+I decided to keep the 33 zero-rated products because The Ramen Rater uses a rating scale from 0 to 5, where zero represents the lowest possible rating rather than a missing value.
+
+However, I removed the 14 reviews with missing star ratings from the rating analysis because they cannot be included when calculating average ratings.
+I kept the original dataset unchanged and created a separate dataset for the analysis.
+:::
+
+## Research Questions
+
+**1.How do instant noodle ratings vary across countries? Which countries have the highest average ratings, and how many products from each country have been reviewed?**
+
+**2.How do ratings differ across brands and packaging styles? Do certain brands or packaging types tend to receive higher ratings?**
+
+**3.Do spicy instant noodles tend to receive higher ratings than non-spicy varieties? Does this pattern vary across countries?**
+
+```{r}
+country_summary <- ramen_rated |>
+  group_by(country) |>
+  summarise(
+    average_rating = mean(stars),
+    total_reviews = n()
+  ) |>
+  arrange(desc(average_rating))
+
+country_summary
+```
+
+# Rating Distribution by Country
+```{r}
+# ratings by country
+country_plot_data <- ramen_rated |>
+  group_by(country) |>
+  summarise(
+    average_rating = mean(stars),
+    total_reviews = n(),
+    .groups = "drop"
+  ) |>
+  filter(total_reviews >= 10) |>
+  arrange(average_rating)
+
+ggplot(country_plot_data,
+       aes(x = average_rating,
+           y = reorder(country, average_rating),
+           size = total_reviews)) +
+  geom_point(alpha = 0.7, color = "blue") +
+  labs(
+    title = "Average Instant Noodle Ratings by Country",
+    x = "Average rating",
+    y = "Country",
+    size = "Number of reviews"
+  ) +
+  xlim(0, 5)
+```
+
+```{r, fig.width=15, fig.height=18}
+# Rating Distribution by Country
+ggplot(
+  ramen_rated,
+  aes(
+    x = stars,
+    y = reorder(country, stars, FUN = median)
+  )
+) +
+  geom_boxplot(
+    fill = "white",
+    color = "black",
+    width = 0.65,
+    linewidth = 0.8
+  ) +
+  labs(
+    title = "Instant Noodle Ratings Across Countries",
+    x = "Star Rating",
+    y = "Country"
+  ) +
+  theme_bw(base_size = 14) +
+  theme_gray()
+```
+
+# Rating Distribution_Reviers
+How are instant noodle ratings distributed across all reviews?
+```{r}
+ggplot(ramen_rated, aes(x = factor(stars))) +
+  geom_bar() +
+  labs(
+    title = "Distribution of Instant Noodle Ratings",
+    x = "Star Rating",
+    y = "Number of Reviews"
+  ) +
+  theme_gray() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+```
+
+```{r}
+ggplot(
+  country_summary |> filter(total_reviews >= 10),
+  aes(
+    x = average_rating,
+    y = reorder(country, average_rating),
+    color = average_rating,
+    size = total_reviews
+  )
+) +
+  geom_point() +
+  scale_color_gradient(low = "skyblue", high = "tomato") +
+  labs(
+    title = "Average Ratings by Country",
+    x = "Average Rating",
+    y = "Country",
+    color = "Average Rating",
+    size = "Number of Reviews"
+  ) +
+  theme_gray()
+```
+
+## Research Question 2
+How do ratings differ across brands and packaging styles? Do certain brands or packaging types tend to receive higher ratings?
+
+
+
+```{r, fig.width=10, fig.height=8}
+
+brand_summary <- ramen_rated |>
+  group_by(brand) |>
+  summarise(
+    average_rating = mean(stars),
+    total_reviews = n(),
+    .groups = "drop"
+  ) |>
+  slice_max(total_reviews, n = 15) |>
+  mutate(brand = reorder(brand, average_rating))
+
+ggplot(brand_summary,
+       aes(x = average_rating, y = brand)) +
+  geom_segment(
+    aes(x = 0, xend = average_rating,
+        yend = brand),
+    color = "black"
+  ) +
+  geom_point(
+    aes(color = total_reviews),
+    size = 4
+  ) +
+  scale_color_gradient(
+    low = "skyblue",
+    high = "red"
+  ) +
+  scale_x_continuous(
+    limits = c(0, 5),
+    breaks = 0:5
+  ) +
+  labs(
+    title = "Average Ratings by Brand",
+    x = "Average Rating",
+    y = "Brand",
+    color = "Number of Reviews"
+  ) +
+  theme_gray(base_size = 13)
+```
+
+## Research Question 3
+Do spicy instant noodles tend to receive higher ratings than non-spicy varieties? Does this pattern vary across countries?
+
+```{r}
+ramen_spicy <- ramen_rated |>
+  mutate(
+    spice_type = if_else(
+      str_detect(str_to_lower(variety), "spicy"),
+      "Spicy",
+      "Non-spicy"
+    )
+  )
+```
+
+
+```{r}
+spicy_comparison <- ramen_spicy |>
+  group_by(country, spice_type) |>
+  summarise(
+    average_rating = mean(stars),
+    n = n(),
+    .groups = "drop"
+  ) |>
+  filter(n >= 5) |>
+  group_by(country) |>
+  filter(n_distinct(spice_type) == 2) |>
+  ungroup()
+```
+
+```{r}
+ggplot(spicy_comparison,
+       aes(x = spice_type,
+           y = average_rating,
+           group = country,
+           color = country)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 3) +
+  labs(
+    title = "Spicy vs. Non-spicy Ratings Across Countries",
+    x = "Noodle Type",
+    y = "Average Rating",
+    color = "Country"
+  ) +
+  theme_gray()
+```
+
